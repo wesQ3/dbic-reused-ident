@@ -16,5 +16,5 @@ diag 'Actual CD id: '.$cd_from_db->id;
 isnt $cd->id, $art->id, 'created objects id should not come from the previous object';
 
 my $track = $cd->create_related(tracks => { title => 'XXX' }); # FK error
-say $track->id;
 
+done_testing;
